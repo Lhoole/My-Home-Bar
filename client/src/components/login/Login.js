@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Auth from '../../utils/auth';
 import { useMutation } from "@apollo/client";
 import { LOGIN } from "../../utils/mutations";
+import { useNavigate } from 'react-router-dom';
 
 function Login () {
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, {error}] = useMutation(LOGIN);
+    const navigate = useNavigate();
     const handleChange = (event) => {
         const { name, value } = event.target;
     
@@ -21,6 +23,7 @@ function Login () {
           });
     
           Auth.login(data.login.token);
+          navigate.push('/')
         } catch (e) {
           console.error(e);
         }

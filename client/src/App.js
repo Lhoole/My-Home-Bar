@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink,
 } from '@apollo/client';
@@ -7,6 +5,8 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/nav/Nav';
 import Login from './components/login/Login';
+import Signup from './components/signup/Signup';
+import Homepage from './components/homepage/Homepage';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -41,34 +41,18 @@ function App() {
             path='/login' 
             element={<Login />} 
           />
-          {/* <Route 
-            path='/saved' 
-            element={<SavedBooks />} 
+          <Route 
+            path='/signup' 
+            element={<Signup />} 
           />
           <Route 
-            path='*'
-            element={<h1 className='display-2'>Wrong page!</h1>}
-          /> */}
+            path='/' 
+            element={<Homepage />} 
+          />
         </Routes>
       </>
     </Router>
     </ApolloProvider>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 
