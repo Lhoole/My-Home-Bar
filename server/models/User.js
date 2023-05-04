@@ -1,12 +1,11 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, SchemaType } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-// import schema from Book.js
-const bookSchema = require('./Book');
+const Spirit = require('./Spirit');
 
 const userSchema = new Schema(
   {
-    username: {
+    firstname: {
       type: String,
       required: true,
       unique: true,
@@ -21,10 +20,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    // set savedBooks to be an array of data that adheres to the bookSchema
-    savedBooks: [bookSchema],
+    barStock: [{
+      type: Schema.Types.ObjectId, 
+      ref: "Spirit",
+    }],
   },
-  // set this to use virtual below
   {
     toJSON: {
       virtuals: true,
