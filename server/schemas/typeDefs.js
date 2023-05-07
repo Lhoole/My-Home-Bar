@@ -23,6 +23,7 @@ const typeDefs = gql`
     recipe: String
     ingredients: [String]
     imgLink: String
+    isFavourite: Boolean
   }
 
   type Auth {
@@ -49,6 +50,7 @@ const typeDefs = gql`
     addExisting(_id: ID!): Spirit
     removeSpirit(_id: ID!): Spirit
     addCocktail(cocktail: String!, description: String, imgLink: String, recipe: String!, ingredients: [String]!): Cocktails
+    addFavourite(cocktailId: ID!, isFavourite: Boolean!): User
   }
 `;
 

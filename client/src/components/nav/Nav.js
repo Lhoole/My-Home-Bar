@@ -54,7 +54,7 @@ function Nav() {
                         >
                             <LinkTab label="My Bar" href="/mybar"/>
                             <LinkTab label="Cocktail Search" href="/cocktails"/>
-                            <LinkTab label="Favourites" href="/favorites"/>
+                            <LinkTab label="Favourites" href="/favourites"/>
                             <IconButton
                         size="large"
                         aria-controls="menu-appbar"

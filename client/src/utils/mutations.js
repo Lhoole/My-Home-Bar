@@ -48,3 +48,10 @@ mutation  RemoveSpirit($_id: ID!) {
     }
   }
 `
+export const ADD_FAVOURITE = gql`
+  mutation addFavourite($cocktailId: ID!, $isFavourite: Boolean!) {
+    addFavourite(cocktailId: $cocktailId, isFavourite: $isFavourite) {
+      _id
+    }
+  }
+`;

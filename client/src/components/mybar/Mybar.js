@@ -22,7 +22,6 @@ function Mybar () {
       }
   
     const user = data?.me || {};
-    console.log(user)
 
 
     const handleNewSubmit = () => {

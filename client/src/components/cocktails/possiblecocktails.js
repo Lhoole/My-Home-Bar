@@ -1,17 +1,31 @@
 import React, { useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import Auth from '../../utils/auth';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import {  QUERY_POSSIBLECOCKTAILS } from '../../utils/queries';
+import { ADD_FAVOURITE } from '../../utils/mutations';
 import { Card, CardContent, Grid, List, ListItem, Typography, Checkbox, IconButton } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
+
+
 const PossibleCocktailsPage =({
     user
    }) => {
+    const [updateFavourite] = useMutation(ADD_FAVOURITE);
     const { loading, error, data } = useQuery(QUERY_POSSIBLECOCKTAILS);
-
+    const handleFavouriteToggle = async (cocktailId, isFavourite) => {
+        try {
+          await updateFavourite({
+            variables: {
+              cocktailId,
+              isFavourite: !isFavourite
+            }
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      };
     if (loading) {
       return <div>Loading...</div>;
     }
@@ -44,8 +58,10 @@ const PossibleCocktailsPage =({
                         icon={<FavoriteBorderIcon />}
                         checkedIcon={<FavoriteIcon />}
                         color="primary"
-                        inputProps={{ 'aria-label': 'favorite checkbox' }}
-                      />
+                        checked={cocktail.isFavourite}
+                        onChange={() => handleFavouriteToggle(cocktail._id, cocktail.isFavourite)}
+                        inputProps={{ 'aria-label': 'favourite checkbox' }}
+                        />
                     </div>
                     <Typography>{cocktail.description}</Typography>
                     <List>

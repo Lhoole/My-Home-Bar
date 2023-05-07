@@ -22,10 +22,10 @@ const resolvers = {
         return barStock;
         },
         faves: async (parent, args, context) => {
-            const { _id } = context.user
-            const user = await User.findById(_id).populate('favourites');
+            const user = await User.findOne({ _id: context.user._id });
             const favourites = user.favourites;
-            return favourites;
+            const cocktails = await Cocktails.find({ _id: { $in: favourites } });
+            return cocktails;
         },
         allspirits: async () => {
             return Spirit.find();
@@ -134,6 +134,42 @@ const resolvers = {
       
               return newCocktail;
           },
+          addFavourite: async (_, { cocktailId, isFavourite }, context) => {
+            if (!context.user) {
+              throw new AuthenticationError('You need to be logged in to perform this action.');
+            }
+        
+            const { user_id } = context.user._id;
+        
+            if (isFavourite) {
+              await User.findOneAndUpdate(
+                { _id: context.user._id },
+                { $addToSet: { favourites: cocktailId } },
+                { new: true }
+              );
+            } else {
+              await User.findOneAndUpdate(
+                { _id: context.user._id },
+                { $pull: { favourites: cocktailId } },
+              );
+            }
+        
+            const user = await User.findById(user_id).populate('favourites');
+            return user;
+          },
         },
+        Cocktails: {
+            isFavourite: async (parent, args, context) => {
+              const { user } = context;
+              if (!user) {
+                return false;
+              }
+              const userFavourites = await User.findById(user._id);
+              if (!userFavourites) {
+                return false;
+              }
+              return userFavourites.favourites.includes(parent._id);
+            },
+          },
 }
 module.exports = resolvers;

@@ -72,12 +72,14 @@ export const QUERY_BARSTOCK = gql`
 
 export const QUERY_FAVES = gql`
   query faves {
-    me {
-      _id
-      favourites {
-        _id
-        cocktail
-      }
+   faves {
+    _id
+    cocktail
+    ingredients
+    description
+    recipe
+    imgLink
+    isFavourite
     }
   }
 `;
@@ -101,6 +103,7 @@ query possiblecocktails{
     description
     recipe
     imgLink
+    isFavourite
   }
 }
 `;
@@ -113,6 +116,7 @@ query allcocktails{
     description
     recipe
     imgLink
+    isFavourite
   }
 }
 `;

@@ -9,6 +9,7 @@ import Signup from './components/signup/Signup';
 import Homepage from './components/homepage/Homepage';
 import Mybar from './components/mybar/Mybar';
 import CocktailSearch from './components/cocktails/CocktailSearch';
+import Favourites from './components/favourites/Favourites';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -58,6 +59,10 @@ function App() {
           <Route 
             path='/cocktails' 
             element={<CocktailSearch />} 
+          />
+          <Route 
+            path='/favourites' 
+            element={<Favourites />} 
           />
         </Routes>
       </>
