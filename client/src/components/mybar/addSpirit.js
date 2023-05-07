@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Auth from '../../utils/auth';
 import { useMutation } from "@apollo/client";
-import { ADD_USER } from "../../utils/mutations";
+import { ADD_SPIRIT } from "../../utils/mutations";
 import { useNavigate } from 'react-router-dom';
 
 function Signup () {
     const [formState, setFormState] = useState({ firstname: '',email: '', password: '' });
-    const [addUser, {error}] = useMutation(ADD_USER);
+    const [addUser, {error}] = useMutation(ADD_SPIRIT);
     const navigate = useNavigate();
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -18,14 +18,10 @@ function Signup () {
       };
     async function handleSignup (event){
         try {
-          const { data } = await addUser({
+          const { data } = await addSpirit({
             variables: { ...formState },
           });
-    
-          Auth.login(data.addUser.token);
-          navigate.push('/')
-        } catch (e) {
-          console.error(e);
+
         }
 
         setFormState({

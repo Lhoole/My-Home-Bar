@@ -1,19 +1,12 @@
 import React from "react";
 import Auth from '../../utils/auth';
-import Menu from '@mui/material/Menu';
+import { AppBar, Menu, MenuItem, IconButton, Tab, Tabs, Box, Typography, Toolbar } from '@mui/material';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MenuItem from '@mui/material/MenuItem';
-import IconButton from '@mui/material/IconButton';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import AppBar from '@mui/material/AppBar';
-import Typography from '@mui/material/Typography';
-import Toolbar from '@mui/material/Toolbar';
 
 function LinkTab(props) {
     return (
       <Tab
+      sx={{ fontWeight: 'bold' }}
         component="a"
         onClick={(event) => {
         }}
@@ -52,11 +45,8 @@ function Nav() {
               textDecoration: 'none',
             }} href="/">My Home Bar</Typography>
                 {Auth.loggedIn() && 
-                    <div>
-                            
+                    <div>     
                         <Tabs
-                        
-                            value={value}
                             onChange={handleChange}
                             textColor="secondary"
                             indicatorColor="secondary"
@@ -99,7 +89,6 @@ function Nav() {
                 {!Auth.loggedIn() && 
                 <div>
                     <Tabs
-                            value={value}
                             onChange={handleChange}
                             textColor="secondary"
                             indicatorColor="secondary"

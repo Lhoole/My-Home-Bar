@@ -41,6 +41,22 @@ const resolvers = {
     
           return { token, user };
         },
+        addSpirit: async (parent, { name, spiritType}, context) => {
+            if (!context.user) {
+                throw new AuthenticationError('You need to be logged in to add a spirit.');
+              }
+            const spirit = await Spirit.create({ 
+            name, 
+            spiritType,
+            });
+
+            await User.findOneAndUpdate(
+                { _id: context.user._id },
+                { $addToSet: { barStock: spirit._id } }
+              );
+
+            return spirit;
+          },
     },
 }
 module.exports = resolvers;

@@ -23,3 +23,13 @@ mutation Login($email: String!, $password: String!) {
     }
   }
 `
+
+export const ADD_SPIRIT = gql`
+mutation AddSpirit($name: String!, $spiritType: String!) {
+    addSpirit(name: $name, spiritType: $spiritType) { 
+    _id
+    name
+    spiritType
+    }
+  }
+`

@@ -24,6 +24,10 @@ const userSchema = new Schema(
       type: Schema.Types.ObjectId, 
       ref: "Spirit",
     }],
+    favourites: [{
+      type: Schema.Types.ObjectId, 
+      ref: "Cocktails",
+    }],
   },
   {
     toJSON: {

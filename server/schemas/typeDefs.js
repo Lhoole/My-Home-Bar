@@ -6,7 +6,8 @@ const typeDefs = gql`
     firstname: String
     email: String
     password: String
-    barStock: [Spirit]!
+    barStock: [Spirit]
+    favourites: [Cocktails]
   }
 
   type Spirit {
@@ -15,7 +16,7 @@ const typeDefs = gql`
     spiritType: String
   }
 
-  type Cocktail {
+  type Cocktails {
     _id: ID
     cocktail: String
     description: String
@@ -37,6 +38,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(firstname: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addSpirit(name: String!, spiritType: String!): Spirit
   }
 `;
 
