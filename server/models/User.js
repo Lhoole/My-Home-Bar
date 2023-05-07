@@ -1,4 +1,4 @@
-const { Schema, model, SchemaType } = require('mongoose');
+const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const Spirit = require('./Spirit');

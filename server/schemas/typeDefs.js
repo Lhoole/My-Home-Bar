@@ -21,7 +21,8 @@ const typeDefs = gql`
     cocktail: String
     description: String
     recipe: String
-    ingredients: [Spirit]
+    ingredients: [String]
+    imgLink: String
   }
 
   type Auth {
@@ -33,12 +34,21 @@ const typeDefs = gql`
     users: [User]
     user(email: String!): User
     me: User
+    barstock: [Spirit]
+    faves: [Cocktails]
+    allspirits: [Spirit]
+    allcocktails: [Cocktails]
+    possiblecocktails: [Cocktails]
+
   }
 
   type Mutation {
     addUser(firstname: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addSpirit(name: String!, spiritType: String!): Spirit
+    addExisting(_id: ID!): Spirit
+    removeSpirit(_id: ID!): Spirit
+    addCocktail(cocktail: String!, description: String, imgLink: String, recipe: String!, ingredients: [String]!): Cocktails
   }
 `;
 

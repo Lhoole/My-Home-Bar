@@ -56,3 +56,63 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_BARSTOCK = gql`
+  query barstock {
+    me {
+      _id
+      barStock {
+        name
+        spiritType
+        _id
+      }
+    }
+  }
+`;
+
+export const QUERY_FAVES = gql`
+  query faves {
+    me {
+      _id
+      favourites {
+        _id
+        cocktail
+      }
+    }
+  }
+`;
+
+export const QUERY_ALLSPIRITS = gql`
+query allspirits {
+  allspirits {
+    name
+    spiritType
+    _id
+  }
+}
+`;
+
+export const QUERY_POSSIBLECOCKTAILS = gql`
+query possiblecocktails{
+  possiblecocktails{
+    _id
+    cocktail
+    ingredients
+    description
+    recipe
+    imgLink
+  }
+}
+`;
+export const QUERY_AllCOCKTAILS = gql`
+query allcocktails{
+  allcocktails {
+    _id
+    cocktail
+    ingredients
+    description
+    recipe
+    imgLink
+  }
+}
+`;

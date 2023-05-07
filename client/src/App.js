@@ -8,6 +8,7 @@ import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 import Homepage from './components/homepage/Homepage';
 import Mybar from './components/mybar/Mybar';
+import CocktailSearch from './components/cocktails/CocktailSearch';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -53,6 +54,10 @@ function App() {
           <Route 
             path='/mybar' 
             element={<Mybar />} 
+          />
+          <Route 
+            path='/cocktails' 
+            element={<CocktailSearch />} 
           />
         </Routes>
       </>

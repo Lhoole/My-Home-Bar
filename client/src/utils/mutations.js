@@ -33,3 +33,18 @@ mutation AddSpirit($name: String!, $spiritType: String!) {
     }
   }
 `
+
+export const ADD_EXISTING_SPIRIT = gql`
+mutation AddExisting($_id: ID!) {
+    addExisting(_id: $_id) { 
+    _id
+    }
+  }
+`
+export const REMOVE_SPIRIT = gql`
+mutation  RemoveSpirit($_id: ID!) {
+    removeSpirit(_id: $_id) { 
+    _id
+    }
+  }
+`

@@ -18,12 +18,13 @@ const cocktailSchema = new Schema({
     required: true,
     trim: true,
   },
-  ingredients: [{
-    type: Schema.Types.ObjectId, 
-    ref: "Spirit",
-  }],
+  ingredients: [String
+  ],  
+  imgLink: {
+    type: String
+  },
 });
 
-const Cocktails = model('Cocktail', cocktailSchema);
+const Cocktails = model('Cocktails', cocktailSchema);
 
 module.exports = Cocktails;
