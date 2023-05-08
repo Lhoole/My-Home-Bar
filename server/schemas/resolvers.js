@@ -48,6 +48,16 @@ const resolvers = {
           
             return filteredCocktails;
           },
+          someingredients: async (parent, args, context) => {
+            const user = await User.findOne({ _id: context.user._id }).populate('barStock');
+            const userIngredientsSet = new Set(
+              user.barStock.flatMap((spirit) => spirit.spiritType)
+            );
+            const userIngredients = Array.from(userIngredientsSet);
+            const cocktails = await Cocktails.find({ ingredients: { $in: userIngredients } });
+          
+            return cocktails;
+          },
       },
     
       Mutation: {

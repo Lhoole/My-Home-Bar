@@ -120,3 +120,16 @@ query allcocktails{
   }
 }
 `;
+export const QUERY_SOMEINGREDIENTS = gql`
+query someingredients{
+  someingredients {
+    _id
+    cocktail
+    ingredients
+    description
+    recipe
+    imgLink
+    isFavourite
+  }
+}
+`;

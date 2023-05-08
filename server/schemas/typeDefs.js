@@ -40,6 +40,7 @@ const typeDefs = gql`
     allspirits: [Spirit]
     allcocktails: [Cocktails]
     possiblecocktails: [Cocktails]
+    someingredients: [Cocktails]
 
   }
 

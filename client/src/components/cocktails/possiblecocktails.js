@@ -10,7 +10,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 const PossibleCocktailsPage =({
-    user
+    types,
+    filtersArr
    }) => {
     const [updateFavourite] = useMutation(ADD_FAVOURITE);
     const { loading, error, data } = useQuery(QUERY_POSSIBLECOCKTAILS);
@@ -35,7 +36,14 @@ const PossibleCocktailsPage =({
     }
 
     const { possiblecocktails } = data;
-    const sortedAllCocktails = [...possiblecocktails].sort((a, b) => a.cocktail.localeCompare(b.cocktail));
+    let filteredCocktails = possiblecocktails;
+
+//   if (filtersArr.length > 0) {
+//     filteredCocktails = possiblecocktails.filter(cocktail =>
+//       filtersArr.includes(cocktail.spiritType)
+//     );
+//  }
+    const sortedAllCocktails = [...filteredCocktails].sort((a, b) => a.cocktail.localeCompare(b.cocktail));
 
     return (
       <Grid container spacing={2}>

@@ -27,7 +27,7 @@ function Homepage () {
             }
             {Auth.loggedIn() &&
             <h1>
-                Welcome Back {user.firstname}!
+                Welcome Back {user.firstname}
             </h1>
             }
         </div>

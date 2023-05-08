@@ -8,7 +8,13 @@ import PropTypes from 'prop-types';
 import Allcocktails from './allcocktails';
 import PossibleCocktailsPage from './possiblecocktails'
 import SomeIngredients from './someingredients'
-    
+import SpiritTypes from "../../utils/spiritTypes"
+import AddFilter from "./filters";
+import filtersArr from "./filters";
+
+
+const spiritTypes = SpiritTypes.SpiritTypes    
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
   
@@ -61,14 +67,21 @@ function CocktailSearch () {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-      <PossibleCocktailsPage />
+        <AddFilter/>
+      <PossibleCocktailsPage
+      types = {spiritTypes}
+      filtersArr = {filtersArr}
+      />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
-        <SomeIngredients/>
+        <SomeIngredients
+        types = {spiritTypes}
+        />
       </TabPanel>
       <TabPanel value={value} index={2}>
-       <Allcocktails/>
+       <Allcocktails
+       types = {spiritTypes}
+       />
       </TabPanel>
     </Box>
             
