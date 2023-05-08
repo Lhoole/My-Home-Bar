@@ -1,17 +1,19 @@
 import React, {useState, useEffect} from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import Auth from '../../utils/auth';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../../utils/queries';
+import { CHANGE_PASS } from "../../utils/mutations";
 import { Box, Button, Card, CardContent, CardHeader, Typography, TextField } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 
 function Profile () {
     const { firstname: userParam } = useParams();
-    const [formState, setFormState] = useState({ oldpassword: '', newpassword: '', lastpassword: ""});
+    const [formState, setFormState] = useState({ password: '', newpassword: '', lastpassword: ""});
     const [showChangePass, setShowChangePass] = useState(false)
     const [showDeleteAcc, setShowDeleteAcc] = useState(false)
+    const [changePass, {error}] = useMutation(CHANGE_PASS);
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
       variables: { firstname: userParam },
     });
@@ -36,6 +38,23 @@ function Profile () {
     const toggleDel = () => {
       setShowDeleteAcc(!showDeleteAcc);
     };
+    async function handlechangePass (event){
+      try {
+        const { data } = await changePass({
+          variables: { ...formState },
+        });
+  
+        Auth.getToken();
+      } catch (e) {
+        console.error(e);
+      }
+
+      setFormState({
+        password: '',
+        newpassword: '',
+        lastpassword: ''
+      });
+  }
 
     return(
         <div>
@@ -64,21 +83,31 @@ function Profile () {
             <div>
               <TextField
                 required
+                name="password" 
                 id="outlined-required"
                 label="Old Password"
                 type="password"
                 autoComplete="current-password"
-                value={formState.oldpassword}
+                value={formState.password}
                 onChange={handleChange}
               />
               <TextField
                 required
+                name="newpassword" 
                 id="outlined-password-input"
                 label="New Password"
                 type="password"
                 value={formState.newpassword}
                 onChange={handleChange}
               />
+              <Button
+                  size="large"
+                  variant="outlined"
+                  onClick={handlechangePass}
+                  sx={{ flexShrink: 0 }}
+                >
+                  Change Password
+                </Button>
           </div>
           </Box>
           )}
@@ -101,6 +130,7 @@ function Profile () {
               <Box mb={2} sx={{ display: 'flex', alignItems: 'center' }}>
                 <TextField
                   required
+                  name="lastpassword" 
                   id="outlined-password-input"
                   label="Insert password"
                   type="password"

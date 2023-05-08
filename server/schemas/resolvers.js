@@ -167,6 +167,18 @@ const resolvers = {
             const user = await User.findById(user_id).populate('favourites');
             return user;
           },
+          changePass: async (parent, { password, newpassword }, context) => {
+            const user = await User.findOne({ _id: context.user._id });
+      
+            const correctPw = await user.isCorrectPassword(password);
+      
+            if (!correctPw) {
+              throw new AuthenticationError('Incorrect Password');
+            }
+            user.password = newpassword;
+            await user.save();
+            return user;
+          },
         },
         Cocktails: {
             isFavourite: async (parent, args, context) => {

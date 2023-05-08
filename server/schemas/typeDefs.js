@@ -52,6 +52,7 @@ const typeDefs = gql`
     removeSpirit(_id: ID!): Spirit
     addCocktail(cocktail: String!, description: String, imgLink: String, recipe: String!, ingredients: [String]!): Cocktails
     addFavourite(cocktailId: ID!, isFavourite: Boolean!): User
+    changePass(password: String!, newpassword: String!): Auth
   }
 `;
 

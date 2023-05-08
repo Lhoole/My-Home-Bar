@@ -54,4 +54,13 @@ export const ADD_FAVOURITE = gql`
       _id
     }
   }
-`;
+`
+export const CHANGE_PASS = gql`
+  mutation ChangePass($password: String!, $newpassword: String!) {
+    changePass(password: $password, newpassword: $newpassword) {
+      user {
+        _id
+      }
+    }
+  }
+`
