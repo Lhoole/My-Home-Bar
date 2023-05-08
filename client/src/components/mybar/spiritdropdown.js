@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_ALLSPIRITS } from '../../utils/queries';
 import { ADD_EXISTING_SPIRIT } from "../../utils/mutations"
 import { Box, FormControl, InputLabel, Select, MenuItem, Button } from '@mui/material';
 
 const SpiritDropdown =({
-    user
+    user,
+    refreshList,
+    setRefreshList 
    }) => {
   const [selectedSpirit, setSelectedSpirit] = useState('');
   const { loading, data} = useQuery(QUERY_ALLSPIRITS);
   const [addexistingspirit] = useMutation(ADD_EXISTING_SPIRIT);
-
+  //const [refreshList, setRefreshList] = useState(false);
+  const [domupdate, setdomupdate] = useState([(false)]);
+//   useEffect(() => {
+//     console.log("dom use effect")
+//     if (domupdate) {setdomupdate(false)} else {setdomupdate(true)}
+//   }, [refreshList]);
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -31,6 +38,9 @@ const SpiritDropdown =({
       await addexistingspirit({
         variables: { _id: selectedSpirit },
       });
+      console.log("handle refresh")
+   // if (refreshList) {setRefreshList(false)} else {setRefreshList(true)}
+    setRefreshList(prevValue => !prevValue);
     } catch (error) {
       console.error(error);
     }

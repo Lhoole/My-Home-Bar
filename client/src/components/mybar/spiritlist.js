@@ -9,15 +9,15 @@ import { REMOVE_SPIRIT } from "../../utils/mutations"
 
 const SpiritList =({
  currentuser,
- refreshList
+ refreshList,
+ setRefreshList
 }) => {
-    // useEffect(() => {
-    //     console.log("refreshed")
-    //   }, [refreshList]);
     const [selectedSpirit, setSelectedSpirit] = useState('');
     const [removespirit] = useMutation(REMOVE_SPIRIT);
-    const { loading, error, data, refetch} = useQuery(QUERY_BARSTOCK);
-
+    const {loading, error, data, refetch} = useQuery(QUERY_BARSTOCK);
+    useEffect(() => {
+        refetch()
+      }, [refreshList]);
     if (loading) {
         return <div>Loading...</div>;
       }

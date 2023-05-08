@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Auth from '../../utils/auth';
 import { useMutation } from "@apollo/client";
 import { ADD_SPIRIT } from "../../utils/mutations";
@@ -7,10 +7,17 @@ import { Grid, InputLabel, MenuItem, FormControl, Select, NativeSelect, TextFiel
 import SpiritTypes from "../../utils/spiritTypes"
 const spiritTypes = SpiritTypes.SpiritTypes
 
-function AddSpirit ({ user }) {
+const AddSpirit = ({ 
+  user, 
+  refreshList,
+  setRefreshList 
+}) => {
     const [formState, setFormState] = useState({ name: '',spiritType: ''});
     const [addSpirit, {error, data}] = useMutation(ADD_SPIRIT);
     const navigate = useNavigate();
+    useEffect(() => {
+      console.log("refreshed")
+    }, [refreshList]);
     const handleChange = (event) => {
         const { name, value } = event.target;
     
@@ -34,6 +41,7 @@ function AddSpirit ({ user }) {
             spiritType,
           },
         });
+        setRefreshList(prevValue => !prevValue);
         } catch (e) {
           console.error(e);
         }

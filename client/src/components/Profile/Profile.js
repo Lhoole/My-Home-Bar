@@ -4,30 +4,31 @@ import Auth from '../../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../../utils/queries';
 import SpiritList from './spiritlist';
-import AddNewSpirit from './addNewSpirit'
-import SpiritDropdown from './spiritdropdown'
 import { Box, Button, Typography } from '@mui/material';
 
 
-function Mybar () {
+function Profile () {
     const { firstname: userParam } = useParams();
-    const [refreshList, setRefreshList] = useState(false);
-    const [showAddSpirit, setShowAddSpirit] = useState(false)
-    const [showAddNew, setShowAddNew] = useState(false)
-    const { loading, data, refetch } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
       variables: { firstname: userParam },
     });
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+    
+        setFormState({
+          ...formState,
+          [name]: value,
+        });
+      };
     if (loading) {
         return <div>Loading...</div>;
       }
   
     const user = data?.me || {};
+
     
     const toggleAdd = () => {
         setShowAddSpirit(!showAddSpirit);
-      };
-      const toggleNew = () => {
-        setShowAddNew(!showAddNew);
       };
 
     return(
@@ -38,33 +39,32 @@ function Mybar () {
 
           <Box mb={2}>
             <Button variant="outlined" onClick={toggleAdd}>
-              {showAddSpirit ? "Hide Inputs" : "Add new spirits"}
+              {showAddSpirit ? "Change password" : "Hide"}
             </Button>
           </Box>
 
           {showAddSpirit && (
-            <div>
-              <div>
-                <SpiritDropdown 
-                user={user}
-                refreshList={refreshList}
-                setRefreshList={setRefreshList}
+            <Grid container spacing={2} alignItems="center">
+            <Grid item xs={4}>
+              <Typography variant="h5" component="div">
+                Change password.
+              </Typography>
+            </Grid>
+            <Grid item xs={4}>
+            <TextField
+          label="Old Password"
+          variant="outlined"
+          name="name"
+          value={formState.oldpass}
+          onChange={handleChange}
+          fullWidth
                 />
-            </div>
-            <h3>If the spirit you are looking for doesnt yet exist, try adding your own.</h3> 
-            <Box mb={2}>
-            <Button variant="outlined" onClick={toggleNew}>
-              {showAddNew ? "Hide new spirits" : "Add new spirits"}
-            </Button>
-          </Box>
-          {showAddNew && (
-            <div>
-                <AddNewSpirit 
-                user={user}
-                refreshList={refreshList}
-                setRefreshList={setRefreshList}
-                />
-            </div>)}
+            </Grid>
+            <Grid item xs={4}>
+              <Button variant="contained" onClick={handleSelectSpirit}>
+                Add filter.
+              </Button>
+            </Grid>
             </div>
           )}
 
@@ -73,10 +73,7 @@ function Mybar () {
           </Typography>
 
           <Box>
-            <SpiritList 
-            currentuser={user} 
-            refreshList={refreshList} 
-            setRefreshList={setRefreshList}/>
+            <SpiritList key={refreshList} currentuser={user} refreshList={refreshList} />
           </Box>
         </div>
       ) }
@@ -90,4 +87,4 @@ function Mybar () {
         </div>
     )
 }
-export default Mybar
+export default Profile
