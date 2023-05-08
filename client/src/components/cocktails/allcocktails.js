@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import Auth from '../../utils/auth';
 import { useQuery, useMutation } from '@apollo/client';
@@ -9,10 +9,15 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const Allcocktails =({
-    types
+    types,
+    refreshList,
+    setRefreshList 
    }) => {
-    const { loading, error, data } = useQuery(QUERY_AllCOCKTAILS)
+    const { loading, error, data, refetch } = useQuery(QUERY_AllCOCKTAILS)
     const [updateFavourite] = useMutation(ADD_FAVOURITE);
+    useEffect(() => {
+        refetch()
+      }, [refreshList]);
     const handleFavouriteToggle = async (cocktailId, isFavourite) => {
         try {
           await updateFavourite({
@@ -21,6 +26,7 @@ const Allcocktails =({
               isFavourite: !isFavourite
             }
           });
+          setRefreshList(prevValue => !prevValue);
         } catch (error) {
           console.error(error);
         }

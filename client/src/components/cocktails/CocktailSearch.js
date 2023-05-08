@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import Auth from '../../utils/auth';
-import { useQuery } from '@apollo/client';
-import {  QUERY_POSSIBLECOCKTAILS } from '../../utils/queries';
-import { Card, CardContent, Grid, List, ListItem, AppBar, Menu, MenuItem, IconButton, Tab, Tabs, Box, Typography, Toolbar } from '@mui/material';
+import { Tab, Tabs, Box, Typography, Toolbar } from '@mui/material';
 import PropTypes from 'prop-types';
 import Allcocktails from './allcocktails';
 import PossibleCocktailsPage from './possiblecocktails'
@@ -17,6 +14,7 @@ const spiritTypes = SpiritTypes.SpiritTypes
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
+    
   
     return (
       <div
@@ -51,6 +49,7 @@ function TabPanel(props) {
 
 function CocktailSearch () {
     const [value, setValue] = React.useState(0);
+    const [refreshList, setRefreshList] = useState(false);
     const handleChange = (event, newValue) => {
         setValue(newValue);
       };
@@ -71,16 +70,22 @@ function CocktailSearch () {
       <PossibleCocktailsPage
       types = {spiritTypes}
       filtersArr = {filtersArr}
+      refreshList={refreshList}
+      setRefreshList={setRefreshList}
       />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <SomeIngredients
         types = {spiritTypes}
+        refreshList={refreshList}
+      setRefreshList={setRefreshList}
         />
       </TabPanel>
       <TabPanel value={value} index={2}>
        <Allcocktails
        types = {spiritTypes}
+       refreshList={refreshList}
+      setRefreshList={setRefreshList}
        />
       </TabPanel>
     </Box>

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { useQuery, useMutation } from '@apollo/client';
 import {  QUERY_POSSIBLECOCKTAILS } from '../../utils/queries';
 import { ADD_FAVOURITE } from '../../utils/mutations';
@@ -7,14 +6,17 @@ import { Card, CardContent, Grid, List, ListItem, Typography, Checkbox, IconButt
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-
-
 const PossibleCocktailsPage =({
     types,
-    filtersArr
+    filtersArr,
+    refreshList,
+    setRefreshList 
    }) => {
     const [updateFavourite] = useMutation(ADD_FAVOURITE);
-    const { loading, error, data } = useQuery(QUERY_POSSIBLECOCKTAILS);
+    const { loading, error, data, refetch } = useQuery(QUERY_POSSIBLECOCKTAILS);
+    useEffect(() => {
+        refetch()
+      }, [refreshList]);
     const handleFavouriteToggle = async (cocktailId, isFavourite) => {
         try {
           await updateFavourite({
@@ -23,6 +25,7 @@ const PossibleCocktailsPage =({
               isFavourite: !isFavourite
             }
           });
+          setRefreshList(prevValue => !prevValue);
         } catch (error) {
           console.error(error);
         }

@@ -9,6 +9,7 @@ const AddFilter =({
     types,
    }) => {
     const [formState, setFormState] = useState({ name: '',spiritType: ''});
+    const [filterState, newFilterState] = useState(false);
     const handleChange = (event) => {
         const { name, value } = event.target;
     
@@ -24,6 +25,7 @@ const AddFilter =({
       function removeFilter(event, filter) {
         console.log(event, filter);
         filtersArr = filtersArr.filter((type) => !filter.includes(type));
+        newFilterState(prevValue => !prevValue);
       }
     async function handleSelectSpirit (event){
         try {

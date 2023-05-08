@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
 import { useQuery, useMutation } from '@apollo/client';
 import {  QUERY_FAVES, } from '../../utils/queries';
 import { ADD_FAVOURITE } from '../../utils/mutations';

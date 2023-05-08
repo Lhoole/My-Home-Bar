@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Auth from '../../utils/auth';
 import { useMutation } from "@apollo/client";
 import { ADD_SPIRIT } from "../../utils/mutations";
 import { useNavigate } from 'react-router-dom';
@@ -15,9 +14,6 @@ const AddSpirit = ({
     const [formState, setFormState] = useState({ name: '',spiritType: ''});
     const [addSpirit, {error, data}] = useMutation(ADD_SPIRIT);
     const navigate = useNavigate();
-    useEffect(() => {
-      console.log("refreshed")
-    }, [refreshList]);
     const handleChange = (event) => {
         const { name, value } = event.target;
     

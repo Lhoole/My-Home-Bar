@@ -1,6 +1,4 @@
 import React, { useState, useEffect} from 'react';
-import Auth from '../../utils/auth';
-import { Link } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_BARSTOCK } from '../../utils/queries';
 import { Card, CardContent, Typography, List, ListItem, Grid, IconButton } from '@mui/material';
