@@ -3,12 +3,15 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import Auth from '../../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../../utils/queries';
-import SpiritList from './spiritlist';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Card, CardContent, CardHeader, Typography, TextField } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 function Profile () {
     const { firstname: userParam } = useParams();
+    const [formState, setFormState] = useState({ oldpassword: '', newpassword: '', lastpassword: ""});
+    const [showChangePass, setShowChangePass] = useState(false)
+    const [showDeleteAcc, setShowDeleteAcc] = useState(false)
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
       variables: { firstname: userParam },
     });
@@ -27,55 +30,101 @@ function Profile () {
     const user = data?.me || {};
 
     
-    const toggleAdd = () => {
-        setShowAddSpirit(!showAddSpirit);
+    const toggleChange = () => {
+        setShowChangePass(!showChangePass);
       };
+    const toggleDel = () => {
+      setShowDeleteAcc(!showDeleteAcc);
+    };
 
     return(
         <div>
             {Auth.loggedIn() && (
+          
         <div>
-          <h1>Welcome Back {user.firstname}!</h1>
-
+          <Card>
+      <CardContent>
+          <h2>Hello {user.firstname}!</h2>
+          <h4>Would you like to change your password,</h4>
           <Box mb={2}>
-            <Button variant="outlined" onClick={toggleAdd}>
-              {showAddSpirit ? "Change password" : "Hide"}
+            <Button variant="outlined" onClick={toggleChange}>
+              {showChangePass ? "Hide" : "Change Password"}
             </Button>
           </Box>
 
-          {showAddSpirit && (
-            <Grid container spacing={2} alignItems="center">
-            <Grid item xs={4}>
-              <Typography variant="h5" component="div">
-                Change password.
-              </Typography>
-            </Grid>
-            <Grid item xs={4}>
-            <TextField
-          label="Old Password"
-          variant="outlined"
-          name="name"
-          value={formState.oldpass}
-          onChange={handleChange}
-          fullWidth
-                />
-            </Grid>
-            <Grid item xs={4}>
-              <Button variant="contained" onClick={handleSelectSpirit}>
-                Add filter.
-              </Button>
-            </Grid>
-            </div>
-          )}
-
-          <Typography variant="body1">
-            The current spirits in your bar are:
-          </Typography>
-
-          <Box>
-            <SpiritList key={refreshList} currentuser={user} refreshList={refreshList} />
+          {showChangePass && (
+            <Box
+            component="form"
+            sx={{
+              '& .MuiTextField-root': { m: 1, width: '25ch' },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <div>
+              <TextField
+                required
+                id="outlined-required"
+                label="Old Password"
+                type="password"
+                autoComplete="current-password"
+                value={formState.oldpassword}
+                onChange={handleChange}
+              />
+              <TextField
+                required
+                id="outlined-password-input"
+                label="New Password"
+                type="password"
+                value={formState.newpassword}
+                onChange={handleChange}
+              />
+          </div>
           </Box>
+          )}
+          <h4>or delete your account?</h4>
+          <Box mb={2}>
+            <Button variant="outlined" onClick={toggleDel}>
+              {showDeleteAcc ? "Hide" : "Delete Account"}
+            </Button>
+          </Box>
+          {showDeleteAcc && (
+            <Box
+            component="form"
+            sx={{
+              '& .MuiTextField-root': { m: 1, width: '25ch' },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <div>
+              <Box mb={2} sx={{ display: 'flex', alignItems: 'center' }}>
+                <TextField
+                  required
+                  id="outlined-password-input"
+                  label="Insert password"
+                  type="password"
+                  value={formState.lastpassword}
+                  onChange={handleChange}
+                />
+                <Button
+                  color="error"
+                  size="large"
+                  variant="outlined"
+                  onClick={toggleChange}
+                  startIcon={<DeleteIcon />}
+                  sx={{ flexShrink: 0 }}
+                >
+                  Delete Account
+                </Button>
+              </Box>
+            </div>
+          </Box>
+          )}
+          </CardContent>
+          </Card>
         </div>
+
       ) }
             {!Auth.loggedIn() &&
             <div>

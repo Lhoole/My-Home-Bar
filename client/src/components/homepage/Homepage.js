@@ -3,6 +3,8 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import Auth from '../../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../../utils/queries';
+import { Card, CardContent } from '@mui/material';
+
 
     
 
@@ -17,6 +19,8 @@ function Homepage () {
   
     const user = data?.me || data?.user || {};
     return(
+        <Card>
+      <CardContent>
         <div>
             {!Auth.loggedIn() && 
             <h1>
@@ -31,6 +35,8 @@ function Homepage () {
             </h1>
             }
         </div>
+        </CardContent>
+    </Card>
     )
 }
 export default Homepage

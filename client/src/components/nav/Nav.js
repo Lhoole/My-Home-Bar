@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Auth from '../../utils/auth';
 import { AppBar, Menu, MenuItem, IconButton, Tab, Tabs, Box, Typography, Toolbar } from '@mui/material';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -79,7 +80,7 @@ function Nav() {
                         open={Boolean(anchorEl)}
                         onClose={handleClose}
                     >
-                        <MenuItem onClick={handleClose}>Profile</MenuItem>
+                        <MenuItem onClick={handleClose} component={Link} to="/profile">Profile</MenuItem>
                         <MenuItem onClick={Auth.logout}>Logout</MenuItem>
                     </Menu>
                         </Tabs>

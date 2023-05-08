@@ -57,6 +57,7 @@ const SpiritList =({
 
 
   return (
+
     <div>
     {!barStock.length ? (
      <h3>No Spirits Yet</h3>
@@ -95,6 +96,7 @@ const SpiritList =({
       </Grid>
     )}
     </div>
+
   );
 };
 

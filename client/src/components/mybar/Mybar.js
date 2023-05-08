@@ -6,7 +6,7 @@ import { QUERY_USER, QUERY_ME } from '../../utils/queries';
 import SpiritList from './spiritlist';
 import AddNewSpirit from './addNewSpirit'
 import SpiritDropdown from './spiritdropdown'
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, Card, CardContent } from '@mui/material';
 
 
 function Mybar () {
@@ -31,6 +31,8 @@ function Mybar () {
       };
 
     return(
+      <Card>
+      <CardContent>
         <div>
             {Auth.loggedIn() && (
         <div>
@@ -88,6 +90,8 @@ function Mybar () {
             </div>    
             }
         </div>
+        </CardContent>
+    </Card>
     )
 }
 export default Mybar

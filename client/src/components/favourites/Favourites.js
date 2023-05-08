@@ -38,6 +38,8 @@ const FaveCocktailsPage =({
     const sortedAllCocktails = [...favecocktails].sort((a, b) => a.cocktail.localeCompare(b.cocktail));
 
     return (
+      <Card>
+      <CardContent>
       <Grid container spacing={2}>
         {sortedAllCocktails.map((cocktail) => (
           <Grid item xs={12} md={6} key={cocktail._id}>
@@ -78,6 +80,8 @@ const FaveCocktailsPage =({
           </Grid>
         ))}
       </Grid>
+      </CardContent>
+      </Card>
     );
 }
 

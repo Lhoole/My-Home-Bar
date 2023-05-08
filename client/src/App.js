@@ -10,6 +10,7 @@ import Homepage from './components/homepage/Homepage';
 import Mybar from './components/mybar/Mybar';
 import CocktailSearch from './components/cocktails/CocktailSearch';
 import Favourites from './components/favourites/Favourites';
+import Profile from './components/Profile/Profile';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -38,7 +39,7 @@ function App() {
     <ApolloProvider client={client}>
     <Router>
       <>
-        <Nav />
+        <Nav/>
         <Routes>
           <Route 
             path='/login' 
@@ -63,6 +64,10 @@ function App() {
           <Route 
             path='/favourites' 
             element={<Favourites />} 
+          />
+          <Route 
+            path='/profile' 
+            element={<Profile />} 
           />
         </Routes>
       </>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Auth from '../../utils/auth';
-import { Tab, Tabs, Box, Typography, Toolbar } from '@mui/material';
+import { Tab, Tabs, Box, Typography, Card, CardContent } from '@mui/material';
 import PropTypes from 'prop-types';
 import Allcocktails from './allcocktails';
 import PossibleCocktailsPage from './possiblecocktails'
@@ -54,6 +54,8 @@ function CocktailSearch () {
         setValue(newValue);
       };
     return(
+      <Card>
+      <CardContent>
         <div>
             {Auth.loggedIn() && 
             <div>     
@@ -100,6 +102,8 @@ function CocktailSearch () {
             </div>    
             }
         </div>
+      </CardContent>
+      </Card>
     )
 }
 export default CocktailSearch
