@@ -1,0 +1,134 @@
+[{
+  "_id": {
+    "$oid": "645729c632e159d3dbb99ec6"
+  },
+  "name": "Jim Beam",
+  "spiritType": "Rye",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64572fce666fba87c0e28565"
+  },
+  "name": "Ink",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6457302c666fba87c0e28569"
+  },
+  "name": "Jack Daniels",
+  "spiritType": "Whiskey",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645730b7666fba87c0e2856e"
+  },
+  "name": "Gordons",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645750c35ba96bd80c3493a0"
+  },
+  "name": "Balantines",
+  "spiritType": "Whiskey (Scotch)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64576c83e28bbba363ff067f"
+  },
+  "name": "Roku",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64576e92e28bbba363ff068d"
+  },
+  "name": "Reyka",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64577527e28bbba363ff0693"
+  },
+  "name": "Bundaberg",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645777a4e28bbba363ff0699"
+  },
+  "name": "Grey Goose",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645777f7e28bbba363ff069f"
+  },
+  "name": "El Jimador",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64577a70e28bbba363ff06a6"
+  },
+  "name": "Don Julio",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64577aa1e28bbba363ff06a9"
+  },
+  "name": "Hendricks",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6457a08f5e46b7e796ec58c3"
+  },
+  "name": "Saint Germain",
+  "spiritType": "Liqueur (Elderflower)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6457a7e05e46b7e796ec5949"
+  },
+  "name": "Mr Black",
+  "spiritType": "Liqueur (Coffee)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6457b1853cd0cebfb765ffc9"
+  },
+  "name": "Buffalo Trace",
+  "spiritType": "Bourbon",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6457cc87aa63f7f421b49f2b"
+  },
+  "name": "Cinzano Extra Dry",
+  "spiritType": "Vermouth (White)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6458da4c59327103d741483c"
+  },
+  "name": "Campari",
+  "spiritType": "Liqueur (Campari)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459d342973aeb6c6d0a8f42"
+  },
+  "name": "Gospel",
+  "spiritType": "Whiskey (Rye)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459d369973aeb6c6d0a8f51"
+  },
+  "name": "Cinzano Sweet Red",
+  "spiritType": "Vermouth (Red)",
+  "__v": 0
+}]

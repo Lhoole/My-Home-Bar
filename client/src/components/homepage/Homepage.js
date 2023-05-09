@@ -35,7 +35,7 @@ function Homepage () {
             </h1>
             }
         </div>
-        </CardContent>
+    </CardContent>
     </Card>
     )
 }

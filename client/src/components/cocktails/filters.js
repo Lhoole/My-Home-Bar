@@ -3,13 +3,16 @@ import { Grid, InputLabel, MenuItem, FormControl, Select, Typography, List, Butt
 import SpiritTypes from "../../utils/spiritTypes"
 import CloseIcon from '@mui/icons-material/Close';
 const spiritTypes = SpiritTypes.SpiritTypes
-let filtersArr = []
+
 
 const AddFilter =({
     types,
+    filtersArr,
+    addFilter,
+    removeFilter
    }) => {
     const [formState, setFormState] = useState({ name: '',spiritType: ''});
-    const [filterState, newFilterState] = useState(false);
+
     const handleChange = (event) => {
         const { name, value } = event.target;
     
@@ -19,20 +22,11 @@ const AddFilter =({
         });
       };
       
-      function addFilter(filtertype){
-        filtersArr.push(filtertype)
-      }
-      function removeFilter(event, filter) {
-        console.log(event, filter);
-        filtersArr = filtersArr.filter((type) => !filter.includes(type));
-        newFilterState(prevValue => !prevValue);
-      }
+      
     async function handleSelectSpirit (event){
         try {
           const { spiritType } = formState;
             addFilter(spiritType);
-            
-            console.log(filtersArr)
         } catch (e) {
           console.error(e);
         }

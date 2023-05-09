@@ -7,7 +7,6 @@ import PossibleCocktailsPage from './possiblecocktails'
 import SomeIngredients from './someingredients'
 import SpiritTypes from "../../utils/spiritTypes"
 import AddFilter from "./filters";
-import filtersArr from "./filters";
 
 
 const spiritTypes = SpiritTypes.SpiritTypes    
@@ -50,9 +49,22 @@ function TabPanel(props) {
 function CocktailSearch () {
     const [value, setValue] = React.useState(0);
     const [refreshList, setRefreshList] = useState(false);
+    // const [filterState, newFilterState] = useState(false);
+    const [filtersArr, setFiltersArr] = useState([])
+    // let filtersArr = []
     const handleChange = (event, newValue) => {
         setValue(newValue);
       };
+      function addFilter(filtertype){
+        //filtersArr.push(filtertype)
+        setFiltersArr([...filtersArr, filtertype])
+      }
+      function removeFilter(event, filter) {
+        console.log(event, filter);
+        var temp = filtersArr.filter((type) => !filter.includes(type));
+        setFiltersArr(temp)
+        // newFilterState(prevValue => !prevValue);
+      }
     return(
       <Card>
       <CardContent>
@@ -68,7 +80,12 @@ function CocktailSearch () {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <AddFilter/>
+        <AddFilter
+        filtersArr = {filtersArr}
+        addFilter = {addFilter}
+        removeFilter = {removeFilter}
+        />
+        {filtersArr.map(test => {return test})}
       <PossibleCocktailsPage
       types = {spiritTypes}
       filtersArr = {filtersArr}

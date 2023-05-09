@@ -179,6 +179,19 @@ const resolvers = {
             await user.save();
             return user;
           },
+          deleteAcc: async (parent, { password }, context) => {
+            const user = await User.findOne({ _id: context.user._id });
+      
+            const correctPw = await user.isCorrectPassword(password);
+      
+            if (!correctPw) {
+              throw new AuthenticationError('Incorrect Password');
+            }
+            await User.findOneAndDelete({
+              _id: user._id,
+            });
+            return user;
+          },
         },
         Cocktails: {
             isFavourite: async (parent, args, context) => {

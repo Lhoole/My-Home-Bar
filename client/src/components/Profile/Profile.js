@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Auth from '../../utils/auth';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../../utils/queries';
-import { CHANGE_PASS } from "../../utils/mutations";
+import { CHANGE_PASS, DELETE_ACC } from "../../utils/mutations";
 import { Box, Button, Card, CardContent, CardHeader, Typography, TextField } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
@@ -13,7 +13,9 @@ function Profile () {
     const [formState, setFormState] = useState({ password: '', newpassword: '', lastpassword: ""});
     const [showChangePass, setShowChangePass] = useState(false)
     const [showDeleteAcc, setShowDeleteAcc] = useState(false)
+    const navigate = useNavigate();
     const [changePass, {error}] = useMutation(CHANGE_PASS);
+    const [deleteAcc, {}] = useMutation(DELETE_ACC);
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
       variables: { firstname: userParam },
     });
@@ -45,6 +47,26 @@ function Profile () {
         });
   
         Auth.getToken();
+      } catch (e) {
+        console.error(e);
+      }
+
+      setFormState({
+        password: '',
+        newpassword: '',
+        lastpassword: ''
+      });
+      
+    }
+    async function handleDeleteAcc (event){
+      try {
+        console.log(formState)
+        const { data } = await deleteAcc({
+          variables: { password : formState.lastpassword },
+        });
+        console.log(data)
+        Auth.logout();
+        navigate("/")
       } catch (e) {
         console.error(e);
       }
@@ -141,7 +163,7 @@ function Profile () {
                   color="error"
                   size="large"
                   variant="outlined"
-                  onClick={toggleChange}
+                  onClick={handleDeleteAcc}
                   startIcon={<DeleteIcon />}
                   sx={{ flexShrink: 0 }}
                 >

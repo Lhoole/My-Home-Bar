@@ -53,6 +53,7 @@ const typeDefs = gql`
     addCocktail(cocktail: String!, description: String, imgLink: String, recipe: String!, ingredients: [String]!): Cocktails
     addFavourite(cocktailId: ID!, isFavourite: Boolean!): User
     changePass(password: String!, newpassword: String!): Auth
+    deleteAcc(password: String!): Auth
   }
 `;
 

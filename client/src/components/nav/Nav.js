@@ -53,9 +53,9 @@ function Nav() {
                             indicatorColor="secondary"
                             aria-label="secondary tabs example"
                         >
-                            <LinkTab label="My Bar" href="/mybar"/>
-                            <LinkTab label="Cocktail Search" href="/cocktails"/>
-                            <LinkTab label="Favourites" href="/favourites"/>
+                            <LinkTab label="My Bar" component={Link} to="/mybar"/>
+                            <LinkTab label="Cocktail Search" component={Link} to="/cocktails"/>
+                            <LinkTab label="Favourites" component={Link} to="/favourites"/>
                             <IconButton
                         size="large"
                         aria-controls="menu-appbar"

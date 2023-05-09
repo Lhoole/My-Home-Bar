@@ -1,0 +1,94 @@
+[{
+  "_id": {
+    "$oid": "64535fa8b744616d63a47301"
+  },
+  "firstname": "Luke",
+  "email": "luke@email.com",
+  "password": "$2b$10$4KDaqcCip55TRTxoPHuJjOhgPEzwwCoGC4M2QvFE.p/WBNupEKbkC",
+  "barStock": [
+    {
+      "$oid": "6457302c666fba87c0e28569"
+    },
+    {
+      "$oid": "64577527e28bbba363ff0693"
+    },
+    {
+      "$oid": "645750c35ba96bd80c3493a0"
+    },
+    {
+      "$oid": "6457b1853cd0cebfb765ffc9"
+    },
+    {
+      "$oid": "645729c632e159d3dbb99ec6"
+    },
+    {
+      "$oid": "64576c83e28bbba363ff067f"
+    },
+    {
+      "$oid": "645777a4e28bbba363ff0699"
+    },
+    {
+      "$oid": "64576e92e28bbba363ff068d"
+    },
+    {
+      "$oid": "6457cc87aa63f7f421b49f2b"
+    },
+    {
+      "$oid": "645730b7666fba87c0e2856e"
+    },
+    {
+      "$oid": "64572fce666fba87c0e28565"
+    },
+    {
+      "$oid": "6457a7e05e46b7e796ec5949"
+    },
+    {
+      "$oid": "6459d342973aeb6c6d0a8f42"
+    },
+    {
+      "$oid": "6459d369973aeb6c6d0a8f51"
+    },
+    {
+      "$oid": "6458da4c59327103d741483c"
+    }
+  ],
+  "__v": 0,
+  "favourites": [
+    {
+      "$oid": "6457b5330855c7ad24e3dcc2"
+    },
+    {
+      "$oid": "6457cc49aa63f7f421b49f23"
+    },
+    {
+      "$oid": "6458ed4959327103d7414a06"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6458f03259327103d7414a1b"
+  },
+  "firstname": "Nina",
+  "email": "nina@email.com",
+  "password": "$2b$10$r3uTCzO3XBBiUdV2/3UwJOn5w8oGdjZLqXi7ji2FEQa9K8/Wlwhhq",
+  "barStock": [
+    {
+      "$oid": "6457b1853cd0cebfb765ffc9"
+    }
+  ],
+  "favourites": [
+    {
+      "$oid": "6458ed4959327103d7414a06"
+    },
+    {
+      "$oid": "6457cc49aa63f7f421b49f23"
+    },
+    {
+      "$oid": "6458ee9859327103d7414a08"
+    },
+    {
+      "$oid": "6457b5330855c7ad24e3dcc2"
+    }
+  ],
+  "__v": 0
+}]

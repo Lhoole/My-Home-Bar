@@ -41,11 +41,14 @@ const PossibleCocktailsPage =({
     const { possiblecocktails } = data;
     let filteredCocktails = possiblecocktails;
 
-//   if (filtersArr.length > 0) {
-//     filteredCocktails = possiblecocktails.filter(cocktail =>
-//       filtersArr.includes(cocktail.spiritType)
-//     );
-//  }
+  if (filtersArr.length > 0) {
+    filteredCocktails = possiblecocktails.filter(cocktail =>{
+      var result = cocktail.ingredients.some(r=> filtersArr.indexOf(r) >= 0)
+      console.log(cocktail.ingredients, filtersArr, result)
+      return result
+    }
+    );
+ }
     const sortedAllCocktails = [...filteredCocktails].sort((a, b) => a.cocktail.localeCompare(b.cocktail));
 
     return (

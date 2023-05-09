@@ -64,3 +64,13 @@ export const CHANGE_PASS = gql`
     }
   }
 `
+
+export const DELETE_ACC = gql`
+  mutation DeleteAcc($password: String!) {
+    deleteAcc(password: $password) {
+      user {
+        _id
+      }
+    }
+  }
+`

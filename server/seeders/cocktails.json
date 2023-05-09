@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "6457b5330855c7ad24e3dcc2"
+  },
+  "cocktail": "Old Fashioned (Bourbon)",
+  "description": "A classic cocktail as simple as they come. For this one just add all the ingredients to a mixing glass and stir down with ice. Garnish with a twist of orange peel",
+  "recipe": "60ml of Bourbon ,,3-4 dashes of bitters ,,10-15ml of sugarsyrup",
+  "ingredients": [
+    "Bourbon"
+  ],
+  "imgLink": "https://www.liquor.com/thmb/NtKmemhR70zK-UiAaxi2aO9Fgng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__08113350__bourbon-old-fashioned-720x720-recipe-ade6f7780c304999be3577e565c9bcdd.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6457cc49aa63f7f421b49f23"
+  },
+  "cocktail": "Martini (Vodka)",
+  "description": "A classic cocktail considered the height of class. For this one just add all the ingredients to a mixing glass and stir down with ice or shake if you prefer more dilute. Garnish with a twist of lemon rind or some olives. ",
+  "recipe": "60ml of Vodka ,,10-15ml of Vermouth (~5ml for dry, 10ml but pour it out again for extra dry) ,,Optional: 10-20ml olive brine for a dirty martini",
+  "ingredients": [
+    "Vodka",
+    "Vermouth (White)"
+  ],
+  "imgLink": "https://www.liquor.com/thmb/uiVEGvb2jIR-Y_IyKZCIPrxrt-U=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/vodka-martini-1500x1500-hero-080af5bb8ff04851a9c0ecf77a88a818.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6458ed4959327103d7414a06"
+  },
+  "cocktail": "Boulevardier",
+  "description": "A lesser known cocktail and a variant on the Negroni. For this one add all the ingredients to a mixing glass and stir down with ice. Garnish with a twist of orange peel.",
+  "recipe": "20ml of Campari ,,20ml of Vermouth ,,20ml Rye Whiskey",
+  "ingredients": [
+    "Liqueur (Campari)",
+    "Whiskey (Rye)",
+    "Vermouth (Red)"
+  ],
+  "imgLink": "temp",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6458ee9859327103d7414a08"
+  },
+  "cocktail": "Margarita",
+  "description": "A taste of mexico, the go to cocktail for a great night. Add all the ingredients and shake over ice. Serve in a glass with a salt rim.",
+  "recipe": "45ml of Tequila ,,15ml of Cointreau ,,30ml Lime juice ,,Optional: 10-15ml Sugar syrup if you like things sweeter",
+  "ingredients": [
+    "Tequila",
+    "Liqueur (Orange)"
+  ],
+  "imgLink": "https://img.jamieoliver.com/jamieoliver/recipe-database/oldImages/large/1198_1_1436865046.jpg?tr=w-800,h-1066",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459d318973aeb6c6d0a8f2b"
+  },
+  "cocktail": "Manhattan",
+  "description": "Simple 1800s cocktail, add ingredients to a glass and stir. Serve neat and garnish with an orangepeel or maraschino cherry",
+  "recipe": "50ml of Rye Whiskey ,,10ml of Sweet Red Vermouth,,2-3 dashes of bitters",
+  "ingredients": [
+    "Whiskey (Rye)",
+    "Vermouth (Red)"
+  ],
+  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2manhattan.jpg.webp",
+  "__v": 0
+}]
