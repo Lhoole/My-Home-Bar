@@ -95,8 +95,8 @@ function Nav() {
                             indicatorColor="secondary"
                             aria-label="secondary tabs example"
                         >
-                            <LinkTab label="Login" href="/login"/>
-                            <LinkTab label="Sign Up" href="/signup"/>
+                            <LinkTab label="Login" component={Link} to="/login"/>
+                            <LinkTab label="Sign Up" component={Link} to="/signup"/>
                         </Tabs>
                 </div>}
             </Toolbar>
