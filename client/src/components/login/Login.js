@@ -62,7 +62,7 @@ function Login () {
             required
             name="password"
             id="outlined-password-input"
-            label="New Password"
+            label="Password"
             type="password"
             value={formState.password}
             onChange={handleChange}

@@ -13,8 +13,8 @@ import Favourites from './components/favourites/Favourites';
 import Profile from './components/Profile/Profile';
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
-  // uri: '/graphql',
+ // uri: 'http://localhost:3001/graphql',
+  uri: '/graphql',
 });
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists

@@ -66,7 +66,7 @@ function Profile () {
         });
         console.log(data)
         Auth.logout();
-        navigate("/")
+        navigate.push("/")
       } catch (e) {
         console.error(e);
       }
