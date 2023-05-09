@@ -8,6 +8,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const SomeIngredients =({
     types,
+    filtersArr,
     refreshList,
     setRefreshList 
    }) => {
@@ -39,8 +40,16 @@ const SomeIngredients =({
       }
     
       const someIngredients = data.someingredients;
-     const sortedSomeIngredients = [...someIngredients].sort((a, b) => a.cocktail.localeCompare(b.cocktail));
-      console.log(someIngredients)
+      let filteredCocktails = someIngredients;
+      if (filtersArr.length > 0) {
+        filteredCocktails = someIngredients.filter(cocktail =>{
+          var result = cocktail.ingredients.some(r=> filtersArr.indexOf(r) >= 0)
+          return result
+        }
+        );
+     }
+
+     const sortedSomeIngredients = [...filteredCocktails].sort((a, b) => a.cocktail.localeCompare(b.cocktail));
       return(
     <Grid container spacing={2}>
         {sortedSomeIngredients.map((cocktail) => (

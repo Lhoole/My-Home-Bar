@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useQuery, useMutation } from '@apollo/client';
 import {  QUERY_FAVES, } from '../../utils/queries';
 import { ADD_FAVOURITE } from '../../utils/mutations';
@@ -11,8 +11,12 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 const FaveCocktailsPage =({
     user
    }) => {
+    const [refreshList, setRefreshList] = useState(false);
     const [updateFavourite] = useMutation(ADD_FAVOURITE);
-    const { loading, error, data } = useQuery(QUERY_FAVES);
+    const { loading, error, data, refetch } = useQuery(QUERY_FAVES);
+    useEffect(() => {
+      refetch()
+    }, [refreshList]);
     const handleFavouriteToggle = async (cocktailId, isFavourite) => {
         try {
           await updateFavourite({
@@ -21,6 +25,7 @@ const FaveCocktailsPage =({
               isFavourite: !isFavourite
             }
           });
+          setRefreshList(prevValue => !prevValue);
         } catch (error) {
           console.error(error);
         }

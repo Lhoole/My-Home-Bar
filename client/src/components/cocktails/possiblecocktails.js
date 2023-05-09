@@ -44,7 +44,6 @@ const PossibleCocktailsPage =({
   if (filtersArr.length > 0) {
     filteredCocktails = possiblecocktails.filter(cocktail =>{
       var result = cocktail.ingredients.some(r=> filtersArr.indexOf(r) >= 0)
-      console.log(cocktail.ingredients, filtersArr, result)
       return result
     }
     );
