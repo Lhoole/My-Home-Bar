@@ -63,4 +63,69 @@
   ],
   "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2manhattan.jpg.webp",
   "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fd505ed003767e04f720"
+  },
+  "cocktail": "Daiquiri",
+  "description": "A drink with tropical vibes best shaken. Serve neat and garnish with a lime.",
+  "recipe": "60ml of White Rum ,,30ml lime juice ,,15ml sugar syrup",
+  "ingredients": [
+    "Rum (White)"
+  ],
+  "imgLink": "https://www.thespruceeats.com/thmb/TB0bX315BLqjBt7Nwo1BSQ6j7v4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/SES-classic-daiquiri-recipe-759294-hero-4-2ce74e7410a849118cac537834a36ea4.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fecd5ed003767e04f722"
+  },
+  "cocktail": "Mojito",
+  "description": "A refreshing drink for a hot day. Place the lime and mint at the bottom of the glass and muddle (crush together). Add the rum and sugar, some ice, and top with soda. Garnish with a lime wheel and a mint sprig. Pro Tip: If you 'crack' the mint first by placing it in your palm and smaking with the back of your hand, you release the flavour more.",
+  "recipe": "60ml of White Rum ,,Half a lime cut to wedges,, 5-10 large mint leaves ,,15ml sugar syrup ,,Soda water",
+  "ingredients": [
+    "Rum (White)"
+  ],
+  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2-Mojito-960x1440.jpg.webp",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a00535ed003767e04f724"
+  },
+  "cocktail": "Espresso Martini",
+  "description": "A pick-me-up on a long night or a coffee for a hot day. Add the ingredients to a shaker and shake aggressively (To get that nice foam). Garnish with a few coffee beans.",
+  "recipe": "30ml of Vodka ,,30ml of Coffee liqueur ,,15ml sugar syrup ,, 30ml of espresso (1 shot) ,, Optional: 15ml of Chocolate Liqueur",
+  "ingredients": [
+    "Vodka",
+    "Liqueur (Coffee)"
+  ],
+  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2-Espresso-Martini-696x696.jpg.webp",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a02655ed003767e04f726"
+  },
+  "cocktail": "Long Island Ice Tea",
+  "description": "The big coctail everyone has knows. Add all, shake, and top with cola. Garnish with a lemon wedge or lime wheel",
+  "recipe": "15ml of Vodka ,,15ml of Gin ,,15ml of Tequila ,,15ml of White Rum,, 15ml of Triple Sec ,,15ml sugar syrup ,,15ml Lemon juice ,,15ml Lime Juice,, Cola ,, Optional: 30ml of either lime or lemon juice is fine if you only have 1",
+  "ingredients": [
+    "Vodka",
+    "Gin (Dry)",
+    "Rum (White)",
+    "Tequila",
+    "Liqueur (Orange)"
+  ],
+  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2Long-Island-Iced-tea.jpg.webp",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a03a25ed003767e04f728"
+  },
+  "cocktail": "Caipirinha",
+  "description": "The taste of Brazi. Build this one in the glass. Muddle (crush) the limes in the bottom of the glass. Add the sugar, fill with crushed ice and pour the Cachaça over the top and stir. Garnish with a lime wheel",
+  "recipe": "60ml of Cachaça ,,3-4 Lime wedges ,,15ml sugar syrup",
+  "ingredients": [
+    "Cachaça"
+  ],
+  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/Caipirinha.jpg.webp",
+  "__v": 0
 }]
