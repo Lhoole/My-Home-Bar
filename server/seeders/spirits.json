@@ -1,19 +1,5 @@
 [{
   "_id": {
-    "$oid": "645729c632e159d3dbb99ec6"
-  },
-  "name": "Jim Beam",
-  "spiritType": "Rye",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "64572fce666fba87c0e28565"
-  },
-  "name": "Ink",
-  "spiritType": "Gin (New Western)",
-  "__v": 0
-},{
-  "_id": {
     "$oid": "6457302c666fba87c0e28569"
   },
   "name": "Jack Daniels",
@@ -21,10 +7,10 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "645730b7666fba87c0e2856e"
+    "$oid": "645729c632e159d3dbb99ec6"
   },
-  "name": "Gordons",
-  "spiritType": "Gin (Dry)",
+  "name": "Jim Beam",
+  "spiritType": "Rye",
   "__v": 0
 },{
   "_id": {
@@ -35,24 +21,10 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "64576c83e28bbba363ff067f"
-  },
-  "name": "Roku",
-  "spiritType": "Gin (Dry)",
-  "__v": 0
-},{
-  "_id": {
     "$oid": "64576e92e28bbba363ff068d"
   },
   "name": "Reyka",
   "spiritType": "Vodka",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "64577527e28bbba363ff0693"
-  },
-  "name": "Bundaberg",
-  "spiritType": "Rum",
   "__v": 0
 },{
   "_id": {
@@ -70,31 +42,10 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "64577a70e28bbba363ff06a6"
-  },
-  "name": "Don Julio",
-  "spiritType": "Tequila",
-  "__v": 0
-},{
-  "_id": {
     "$oid": "64577aa1e28bbba363ff06a9"
   },
   "name": "Hendricks",
   "spiritType": "Gin (New Western)",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6457a08f5e46b7e796ec58c3"
-  },
-  "name": "Saint Germain",
-  "spiritType": "Liqueur (Elderflower)",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6457a7e05e46b7e796ec5949"
-  },
-  "name": "Mr Black",
-  "spiritType": "Liqueur (Coffee)",
   "__v": 0
 },{
   "_id": {
@@ -130,5 +81,733 @@
   },
   "name": "Cinzano Sweet Red",
   "spiritType": "Vermouth (Red)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645730b7666fba87c0e2856e"
+  },
+  "name": "Gordons",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64577527e28bbba363ff0693"
+  },
+  "name": "Bundaberg",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64572fce666fba87c0e28565"
+  },
+  "name": "Ink",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64576c83e28bbba363ff067f"
+  },
+  "name": "Roku",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64577a70e28bbba363ff06a6"
+  },
+  "name": "Don Julio",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6457a08f5e46b7e796ec58c3"
+  },
+  "name": "Saint Germain",
+  "spiritType": "Liqueur (Elderflower)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6457a7e05e46b7e796ec5949"
+  },
+  "name": "Mr Black",
+  "spiritType": "Liqueur (Coffee)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f5ab95a7a7791feff843"
+  },
+  "name": "Aperol",
+  "spiritType": "Liqueur (Aperol)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f5f195a7a7791feff848"
+  },
+  "name": "Cointreau",
+  "spiritType": "Liqueur (Orange)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f62b95a7a7791feff84d"
+  },
+  "name": "Triple Sec",
+  "spiritType": "Liqueur (Orange)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f68195a7a7791feff852"
+  },
+  "name": "Kahlua",
+  "spiritType": "Liqueur (Coffee)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f69f95a7a7791feff857"
+  },
+  "name": "Chambord",
+  "spiritType": "Liqueur (Maraschino)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f6af95a7a7791feff85c"
+  },
+  "name": "Malibu",
+  "spiritType": "Rum (White)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f70495a7a7791feff861"
+  },
+  "name": "Bacardi Carta Blanca",
+  "spiritType": "Rum (White)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f71d95a7a7791feff866"
+  },
+  "name": "Patron Silver",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f73795a7a7791feff86b"
+  },
+  "name": "Bombay Sapphire",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f74b95a7a7791feff870"
+  },
+  "name": "Jack Daniels",
+  "spiritType": "Whiskey",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f75695a7a7791feff875"
+  },
+  "name": "Grey Goose",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f77395a7a7791feff87a"
+  },
+  "name": "The Kraken",
+  "spiritType": "Rum (Spiced)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f78495a7a7791feff87f"
+  },
+  "name": "Captain Morgan",
+  "spiritType": "Rum (Spiced)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f7ac95a7a7791feff884"
+  },
+  "name": "Tanqueray",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f7cb95a7a7791feff889"
+  },
+  "name": "Jose Cuervo Reprosado",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f7e995a7a7791feff88e"
+  },
+  "name": "Frangelico ",
+  "spiritType": "Liqueur (Hazelnut)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f7ff95a7a7791feff893"
+  },
+  "name": "Napoleon 1875",
+  "spiritType": "Brandy",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f81895a7a7791feff898"
+  },
+  "name": "Four Pillars Bloody Shiraz ",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f82995a7a7791feff89d"
+  },
+  "name": "Reyka ",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f85495a7a7791feff8a2"
+  },
+  "name": "Malfy Rosa",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f88795a7a7791feff8a7"
+  },
+  "name": "Haku",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f8aa95a7a7791feff8ac"
+  },
+  "name": "Gordons Premium Pink",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f8bd95a7a7791feff8b1"
+  },
+  "name": "Mount Gay",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f8fd95a7a7791feff8b6"
+  },
+  "name": "Pimms",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f91295a7a7791feff8bb"
+  },
+  "name": "Don Julio Anejo",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f93795a7a7791feff8c0"
+  },
+  "name": "The Botanist",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f95e95a7a7791feff8c5"
+  },
+  "name": "Drambuie",
+  "spiritType": "Whiskey",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f98b95a7a7791feff8ca"
+  },
+  "name": "Tanqueray Flor De Sevilla ",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f9a395a7a7791feff8cf"
+  },
+  "name": "Whitely Neill Rhubarb And Ginger",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f9bd95a7a7791feff8d4"
+  },
+  "name": "Midori",
+  "spiritType": "Liqueur (Melon)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f9d295a7a7791feff8d9"
+  },
+  "name": "Galliano",
+  "spiritType": "Sambucca (Black)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459f9e595a7a7791feff8de"
+  },
+  "name": "Titos",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fa3695a7a7791feff8e3"
+  },
+  "name": "Tia Maria",
+  "spiritType": "Liqueur (Coffee)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fa5495a7a7791feff8e8"
+  },
+  "name": "Archie Rose Signature Dry",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fa6795a7a7791feff8ed"
+  },
+  "name": "The Melbourne Gin Company",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fa8495a7a7791feff8f2"
+  },
+  "name": "Baileys Chocolat Luxe",
+  "spiritType": "Liqueur (Chocolate)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fa9b95a7a7791feff8f7"
+  },
+  "name": "Luxardo Amaretto ",
+  "spiritType": "Liqueur (Almond)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fab095a7a7791feff8fc"
+  },
+  "name": "Havana Club",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459faca95a7a7791feff901"
+  },
+  "name": "Four Pillars Fresh Yuzu",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459faef95a7a7791feff906"
+  },
+  "name": "Malfy Con Aracia",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fb0595a7a7791feff90b"
+  },
+  "name": "Rum Co Of Fiji",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fb2695a7a7791feff910"
+  },
+  "name": "Bundaberg",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fb3c95a7a7791feff915"
+  },
+  "name": "Sipsmith",
+  "spiritType": "Gin (Dry)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fb5b95a7a7791feff91a"
+  },
+  "name": "St Remy",
+  "spiritType": "Brandy",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fb7295a7a7791feff91f"
+  },
+  "name": "Four Pillars Olive Leaf",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fbab95a7a7791feff924"
+  },
+  "name": "Absolut",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fbc795a7a7791feff929"
+  },
+  "name": "Hayman's Sloe ",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fbde95a7a7791feff92e"
+  },
+  "name": "Don Juan Escobar",
+  "spiritType": "Mezcal",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fbf495a7a7791feff933"
+  },
+  "name": "23rd St Distillery Violet",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fd8f1c8418d30018c01a"
+  },
+  "name": "Metaxa",
+  "spiritType": "Brandy",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fda01c8418d30018c01f"
+  },
+  "name": "Baron Samedi",
+  "spiritType": "Rum (Spiced)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fde91c8418d30018c024"
+  },
+  "name": "Cazcabel Coconut ",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fe011c8418d30018c029"
+  },
+  "name": "Appleton Estate Signature Blend Jamaican",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fe201c8418d30018c02e"
+  },
+  "name": "Dolin",
+  "spiritType": "Vermouth (White)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fe4f1c8418d30018c033"
+  },
+  "name": "Plantation Stiggins Fancy Pineapple ",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fe5b1c8418d30018c038"
+  },
+  "name": "Fratello ",
+  "spiritType": "Liqueur (Hazelnut)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fe6b1c8418d30018c03d"
+  },
+  "name": "Absolut Lime",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fe761c8418d30018c042"
+  },
+  "name": "Absolut Passionfruit",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fe7f1c8418d30018c047"
+  },
+  "name": "Absolut Pear",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fea21c8418d30018c04c"
+  },
+  "name": "El Jimador",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459feb81c8418d30018c051"
+  },
+  "name": "Gin Lane 1751 Sloe",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fecc1c8418d30018c057"
+  },
+  "name": "Bardinet XO",
+  "spiritType": "Brandy",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fee51c8418d30018c05c"
+  },
+  "name": "Marie Brizzard",
+  "spiritType": "Liqueur (Elderflower)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ff121c8418d30018c061"
+  },
+  "name": "Brookie's Byron Sloe",
+  "spiritType": "Gin (New Western)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ff2e1c8418d30018c066"
+  },
+  "name": "Rom Millonaro Reprosado",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ff401c8418d30018c06b"
+  },
+  "name": "Bacardi Coconut",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ff591c8418d30018c070"
+  },
+  "name": "Fire And Ice Solid Gold ",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ff711c8418d30018c075"
+  },
+  "name": "Crystal Head",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ff851c8418d30018c07a"
+  },
+  "name": "Green Fairy",
+  "spiritType": "Absinthe",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ff951c8418d30018c07f"
+  },
+  "name": "Vodka &",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ffbb1c8418d30018c084"
+  },
+  "name": "Rockstar Spirits Banana Bomb Navy Strength",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ffdc1c8418d30018c089"
+  },
+  "name": "Svedka Rose",
+  "spiritType": "Vodka",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a00061c8418d30018c08e"
+  },
+  "name": "Brookie's Macadamia ",
+  "spiritType": "Liqueur (Hazelnut)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a002b1c8418d30018c093"
+  },
+  "name": "Heering ",
+  "spiritType": "Liqueur (Maraschino)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a00551c8418d30018c098"
+  },
+  "name": "Tequila Blu Reprosado ",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a00711c8418d30018c09d"
+  },
+  "name": "Beenleigh Double Cask",
+  "spiritType": "Rum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a009d1c8418d30018c0a2"
+  },
+  "name": "Solento Organic Reprosado ",
+  "spiritType": "Tequila",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a00ca1c8418d30018c0a7"
+  },
+  "name": "Futyulos Apricot ",
+  "spiritType": "Brandy",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01091c8418d30018c0ac"
+  },
+  "name": "Manly Spirits Coastal Stone Nor East Single Malt",
+  "spiritType": "Whiskey",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a011e1c8418d30018c0b1"
+  },
+  "name": "Wild Turkey Kentucky Straight ",
+  "spiritType": "Whiskey",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01341c8418d30018c0b6"
+  },
+  "name": "Wild Turkey Rye",
+  "spiritType": "Whiskey (Rye)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01431c8418d30018c0bb"
+  },
+  "name": "Canadian Club",
+  "spiritType": "Whiskey",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01551c8418d30018c0c0"
+  },
+  "name": "Chivas Regal Twelve Year Blended",
+  "spiritType": "Whiskey",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01661c8418d30018c0c5"
+  },
+  "name": "Jameson ",
+  "spiritType": "Whiskey",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01821c8418d30018c0ca"
+  },
+  "name": "Glenfiddich Twelve Year Single Malt",
+  "spiritType": "Whiskey (Scotch)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01981c8418d30018c0cf"
+  },
+  "name": "Jim Beam White Label",
+  "spiritType": "Bourbon",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01b21c8418d30018c0d4"
+  },
+  "name": "Grants Triple Wood Blended ",
+  "spiritType": "Whiskey (Scotch)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01c61c8418d30018c0d9"
+  },
+  "name": "Makers Mark Kentucky Straight ",
+  "spiritType": "Bourbon",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a01e71c8418d30018c0de"
+  },
+  "name": "The Glenlivet 12 Year Single Malt ",
+  "spiritType": "Whiskey (Scotch)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a02331c8418d30018c0e3"
+  },
+  "name": "Veuve Clicquot ",
+  "spiritType": "Wine (Sparkling)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a02401c8418d30018c0e8"
+  },
+  "name": "Mumm Brut",
+  "spiritType": "Wine (Sparkling)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a024c1c8418d30018c0ed"
+  },
+  "name": "Chandon Brut ",
+  "spiritType": "Wine (Sparkling)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a02641c8418d30018c0f2"
+  },
+  "name": "Pepperjack Granache",
+  "spiritType": "Wine (Red)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a02751c8418d30018c0f7"
+  },
+  "name": "Penfolds Cabernet Shiraz",
+  "spiritType": "Wine (Red)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a02861c8418d30018c0fc"
+  },
+  "name": "Tread Softly Pinot Noir",
+  "spiritType": "Wine (Red)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a029e1c8418d30018c101"
+  },
+  "name": "Squealing Pig Pinot Gris",
+  "spiritType": "Wine (White)",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a02be1c8418d30018c106"
+  },
+  "name": "Oyster Bay Sauvignon Blanc",
+  "spiritType": "Wine (White)",
   "__v": 0
 }]

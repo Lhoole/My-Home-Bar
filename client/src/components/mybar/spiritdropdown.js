@@ -51,7 +51,7 @@ const SpiritDropdown =({
 
   return (
     <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
+      <FormControl fullWidth sx={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}>
         <InputLabel >Select a spirit</InputLabel>
         <Select
           id="spirit-select"

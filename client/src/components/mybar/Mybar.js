@@ -7,7 +7,7 @@ import SpiritList from './spiritlist';
 import AddNewSpirit from './addNewSpirit'
 import SpiritDropdown from './spiritdropdown'
 import { Box, Button, Typography, Card, CardContent } from '@mui/material';
-
+import background from "../../woodwalpaper.jpg"
 
 function Mybar () {
     const { firstname: userParam } = useParams();
@@ -31,9 +31,9 @@ function Mybar () {
       };
 
     return(
-      <Card>
+      <Card style={{ backgroundImage: `url(${background})` }}>
       <CardContent>
-        <div>
+        <div >
             {Auth.loggedIn() && (
         <div>
           <h1>Welcome Back {user.firstname}!</h1>

@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    background-image: url("https://img.delicious.com.au/PLE8KPLu/del/2019/07/maybe-sammy-111601-3.jpg");
+    background-size: cover;
 }
 
 code {

@@ -45,7 +45,7 @@ const AddFilter =({
           </Typography>
         </Grid>
         <Grid item xs={4}>
-          <FormControl fullWidth>
+          <FormControl fullWidth sx={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}>
             <InputLabel>Spirit Type</InputLabel>
             <Select
               name="spiritType"

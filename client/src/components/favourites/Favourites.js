@@ -5,7 +5,7 @@ import { ADD_FAVOURITE } from '../../utils/mutations';
 import { Card, CardContent, Grid, List, ListItem, Typography, Checkbox, IconButton } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-
+import background from "../../woodwalpaper.jpg"
 
 
 const FaveCocktailsPage =({
@@ -43,7 +43,7 @@ const FaveCocktailsPage =({
     const sortedAllCocktails = [...favecocktails].sort((a, b) => a.cocktail.localeCompare(b.cocktail));
 
     return (
-      <Card>
+      <Card style={{ backgroundImage: `url(${background})` }}>
       <CardContent>
       <Grid container spacing={2}>
         {sortedAllCocktails.map((cocktail) => (

@@ -51,7 +51,7 @@ const AddSpirit = ({
     return (
       <Grid container spacing={2}>
         <Grid item xs={8}>
-        <TextField
+        <TextField sx={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}
           label="Spirit name"
           variant="outlined"
           name="name"
@@ -61,7 +61,7 @@ const AddSpirit = ({
         />
         </Grid>
         <Grid item xs={4}>
-          <FormControl fullWidth>
+          <FormControl fullWidth sx={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}>
             <InputLabel>Spirit Type</InputLabel>
             <Select
               name="spiritType"

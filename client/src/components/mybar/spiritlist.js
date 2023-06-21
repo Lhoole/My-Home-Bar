@@ -4,6 +4,7 @@ import { QUERY_BARSTOCK } from '../../utils/queries';
 import { Card, CardContent, Typography, List, ListItem, Grid, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { REMOVE_SPIRIT } from "../../utils/mutations"
+import background from "../../woodwalpaper.jpg"
 
 const SpiritList =({
  currentuser,
@@ -58,7 +59,8 @@ const SpiritList =({
 
   return (
 
-    <div>
+    //<div style={{ backgroundImage: `url(${background})` }}>
+      <div style={{ backgroundColor: 'transparent' }}>
     {!barStock.length ? (
      <h3>No Spirits Yet</h3>
      ) : (

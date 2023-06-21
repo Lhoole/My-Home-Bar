@@ -7,7 +7,7 @@ import PossibleCocktailsPage from './possiblecocktails'
 import SomeIngredients from './someingredients'
 import SpiritTypes from "../../utils/spiritTypes"
 import AddFilter from "./filters";
-
+import background from "../../woodwalpaper.jpg"
 
 const spiritTypes = SpiritTypes.SpiritTypes    
 
@@ -62,13 +62,13 @@ function CocktailSearch () {
         setFiltersArr(temp)
       }
     return(
-      <Card>
+      <Card style={{ backgroundImage: `url(${background})` }}>
       <CardContent>
         <div>
             {Auth.loggedIn() && 
             <div>     
             <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Cocktails you can make" {...a11yProps(0)} />
           <Tab label="Cocktails you have some ingredients for" {...a11yProps(1)} />
