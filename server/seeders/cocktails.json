@@ -1,29 +1,14 @@
 [{
   "_id": {
-    "$oid": "6458ed4959327103d7414a06"
+    "$oid": "6457b5330855c7ad24e3dcc2"
   },
-  "cocktail": "Boulevardier",
-  "description": "A lesser known cocktail and a variant on the Negroni. For this one add all the ingredients to a mixing glass and stir down with ice. Garnish with a twist of orange peel.",
-  "recipe": "20ml of Campari ,,20ml of Vermouth ,,20ml Rye Whiskey",
+  "cocktail": "Old Fashioned (Bourbon)",
+  "description": "A classic cocktail as simple as they come. For this one just add all the ingredients to a mixing glass and stir down with ice. Garnish with a twist of orange peel",
+  "recipe": "60ml of Bourbon ,,3-4 dashes of bitters ,,10-15ml of sugarsyrup",
   "ingredients": [
-    "Liqueur (Campari)",
-    "Whiskey (Rye)",
-    "Vermouth (Red)"
+    "Bourbon"
   ],
-  "imgLink": "https://www.liquor.com/thmb/boQt-AytPVa9EOUN_tRTo7EcJsg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2019__09__12094720__Boulevardier-720x720-recipe-53da547e8cfc4bd79a393ac99891f5ba.jpg",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6459d318973aeb6c6d0a8f2b"
-  },
-  "cocktail": "Manhattan",
-  "description": "Simple 1800s cocktail, add ingredients to a glass and stir. Serve neat and garnish with an orangepeel or maraschino cherry",
-  "recipe": "50ml of Rye Whiskey ,,10ml of Sweet Red Vermouth,,2-3 dashes of bitters",
-  "ingredients": [
-    "Whiskey (Rye)",
-    "Vermouth (Red)"
-  ],
-  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2manhattan.jpg.webp",
+  "imgLink": "https://www.liquor.com/thmb/NtKmemhR70zK-UiAaxi2aO9Fgng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__08113350__bourbon-old-fashioned-720x720-recipe-ade6f7780c304999be3577e565c9bcdd.jpg",
   "__v": 0
 },{
   "_id": {
@@ -40,15 +25,17 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "6457b5330855c7ad24e3dcc2"
+    "$oid": "6458ed4959327103d7414a06"
   },
-  "cocktail": "Old Fashioned (Bourbon)",
-  "description": "A classic cocktail as simple as they come. For this one just add all the ingredients to a mixing glass and stir down with ice. Garnish with a twist of orange peel",
-  "recipe": "60ml of Bourbon ,,3-4 dashes of bitters ,,10-15ml of sugarsyrup",
+  "cocktail": "Boulevardier",
+  "description": "A lesser known cocktail and a variant on the Negroni. For this one add all the ingredients to a mixing glass and stir down with ice. Garnish with a twist of orange peel.",
+  "recipe": "20ml of Campari ,,20ml of Vermouth ,,20ml Rye Whiskey",
   "ingredients": [
-    "Bourbon"
+    "Liqueur (Campari)",
+    "Whiskey (Rye)",
+    "Vermouth (Red)"
   ],
-  "imgLink": "https://www.liquor.com/thmb/NtKmemhR70zK-UiAaxi2aO9Fgng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__08113350__bourbon-old-fashioned-720x720-recipe-ade6f7780c304999be3577e565c9bcdd.jpg",
+  "imgLink": "https://www.liquor.com/thmb/boQt-AytPVa9EOUN_tRTo7EcJsg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2019__09__12094720__Boulevardier-720x720-recipe-53da547e8cfc4bd79a393ac99891f5ba.jpg",
   "__v": 0
 },{
   "_id": {
@@ -65,6 +52,19 @@
   "__v": 0
 },{
   "_id": {
+    "$oid": "6459d318973aeb6c6d0a8f2b"
+  },
+  "cocktail": "Manhattan",
+  "description": "Simple 1800s cocktail, add ingredients to a glass and stir. Serve neat and garnish with an orangepeel or maraschino cherry",
+  "recipe": "50ml of Rye Whiskey ,,10ml of Sweet Red Vermouth,,2-3 dashes of bitters",
+  "ingredients": [
+    "Whiskey (Rye)",
+    "Vermouth (Red)"
+  ],
+  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2manhattan.jpg.webp",
+  "__v": 0
+},{
+  "_id": {
     "$oid": "6459fd505ed003767e04f720"
   },
   "cocktail": "Daiquiri",
@@ -74,6 +74,31 @@
     "Rum (White)"
   ],
   "imgLink": "https://www.thespruceeats.com/thmb/TB0bX315BLqjBt7Nwo1BSQ6j7v4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/SES-classic-daiquiri-recipe-759294-hero-4-2ce74e7410a849118cac537834a36ea4.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459fecd5ed003767e04f722"
+  },
+  "cocktail": "Mojito",
+  "description": "A refreshing drink for a hot day. Place the lime and mint at the bottom of the glass and muddle (crush together). Add the rum and sugar, some ice, and top with soda. Garnish with a lime wheel and a mint sprig. Pro Tip: If you 'crack' the mint first by placing it in your palm and smaking with the back of your hand, you release the flavour more.",
+  "recipe": "60ml of White Rum ,,Half a lime cut to wedges,, 5-10 large mint leaves ,,15ml sugar syrup ,,Soda water",
+  "ingredients": [
+    "Rum (White)"
+  ],
+  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2-Mojito-960x1440.jpg.webp",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a00535ed003767e04f724"
+  },
+  "cocktail": "Espresso Martini",
+  "description": "A pick-me-up on a long night or a coffee for a hot day. Add the ingredients to a shaker and shake aggressively (To get that nice foam). Garnish with a few coffee beans.",
+  "recipe": "30ml of Vodka ,,30ml of Coffee liqueur ,,15ml sugar syrup ,, 30ml of espresso (1 shot) ,, Optional: 15ml of Chocolate Liqueur",
+  "ingredients": [
+    "Vodka",
+    "Liqueur (Coffee)"
+  ],
+  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2-Espresso-Martini-696x696.jpg.webp",
   "__v": 0
 },{
   "_id": {
@@ -96,7 +121,7 @@
     "$oid": "645a03a25ed003767e04f728"
   },
   "cocktail": "Caipirinha",
-  "description": "The taste of Brazi. Build this one in the glass. Muddle (crush) the limes in the bottom of the glass. Add the sugar, fill with crushed ice and pour the Cachaça over the top and stir. Garnish with a lime wheel",
+  "description": "The taste of Brazil. Build this one in the glass. Muddle (crush) the limes in the bottom of the glass. Add the sugar, fill with crushed ice and pour the Cachaça over the top and stir. Garnish with a lime wheel",
   "recipe": "60ml of Cachaça ,,3-4 Lime wedges ,,15ml sugar syrup",
   "ingredients": [
     "Cachaça"
@@ -105,27 +130,64 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "645a00535ed003767e04f724"
+    "$oid": "6492796c079b141f8462b5d1"
   },
-  "cocktail": "Espresso Martini",
-  "description": "A pick-me-up on a long night or a coffee for a hot day. Add the ingredients to a shaker and shake aggressively (To get that nice foam). Garnish with a few coffee beans.",
-  "recipe": "30ml of Vodka ,,30ml of Coffee liqueur ,,15ml sugar syrup ,, 30ml of espresso (1 shot) ,, Optional: 15ml of Chocolate Liqueur",
+  "cocktail": "SouthSide",
+  "description": "An old speakeasy kind of cocktail thats sharp and refreshing. Shake and strain, garnish with mint",
+  "recipe": "60ml of Gin ,,30ml lime juice ,,15ml sugar syrup ,,4-5 mint leaves",
   "ingredients": [
-    "Vodka",
-    "Liqueur (Coffee)"
+    "Gin (Dry)"
   ],
-  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2-Espresso-Martini-696x696.jpg.webp",
+  "imgLink": "https://vinepair.com/wp-content/uploads/2022/01/southside-card-375x450.jpg",
   "__v": 0
 },{
   "_id": {
-    "$oid": "6459fecd5ed003767e04f722"
+    "$oid": "64927b80079b141f8462b5d3"
   },
-  "cocktail": "Mojito",
-  "description": "A refreshing drink for a hot day. Place the lime and mint at the bottom of the glass and muddle (crush together). Add the rum and sugar, some ice, and top with soda. Garnish with a lime wheel and a mint sprig. Pro Tip: If you 'crack' the mint first by placing it in your palm and smaking with the back of your hand, you release the flavour more.",
-  "recipe": "60ml of White Rum ,,Half a lime cut to wedges,, 5-10 large mint leaves ,,15ml sugar syrup ,,Soda water",
+  "cocktail": "Cosmopolitan",
+  "description": "An 80s cocktail that saw a resurgance as the drink of choice in Sex & The City. Shake and strain, garnish with a twist of lemon",
+  "recipe": "45ml of Vodka ,,15ml Cointreau (or any triplesec) ,,15ml lime juice ,,15 cranberry juice",
   "ingredients": [
-    "Rum (White)"
+    "Vodka",
+    "Liqueur (Orange)"
   ],
-  "imgLink": "https://crazymasalafood.com/wp-content/images/2023/02/2-Mojito-960x1440.jpg.webp",
+  "imgLink": "https://images.immediate.co.uk/production/volatile/sites/30/2021/01/cosmopolitan-5993b36.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64927cce079b141f8462b5e9"
+  },
+  "cocktail": "Mezcal Margarita",
+  "description": "A twist on the classic Marg, Mezcal brings a smokey flavor from the baked agave. Shake and strain, garnish with a lime",
+  "recipe": "45ml of Mezcal ,,15ml Cointreau (or any triplesec) ,,30ml lime juice ,, optional: 15 of agave syrup if you prefer a little sweeter.",
+  "ingredients": [
+    "Mezcal",
+    "Liqueur (Orange)"
+  ],
+  "imgLink": "https://vinepair.com/wp-content/uploads/2021/04/mezcalmarg_card-375x450.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64927efb079b141f8462b5eb"
+  },
+  "cocktail": "Dark and Stormy",
+  "description": "A simple cocktail but all the better for it. Just fill a tall glass with ginger beer and ice leaving space in the top for a rum float. Garnish with lime.",
+  "recipe": "60ml of Dark Rum (preferaby Goslings) ,,200ml Ginger beer (more or less depending on glass size).",
+  "ingredients": [
+    "Rum (Dark)"
+  ],
+  "imgLink": "https://vinepair.com/wp-content/uploads/2023/05/50-most-popular-cocktails-2023-internal-dark-n-stormy.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6492acb4711a3b2cfbe39e9d"
+  },
+  "cocktail": "Amaretto Sour",
+  "description": "A sour on the sweeter side and a much loved cocktail world over. Shake once dry and the again over ice and strain. Garnish with a marachino cherry.",
+  "recipe": "60ml of Amaretto ,,30ml lemon juice ,,15ml Sugar syrup ,,1 egg of egg white.",
+  "ingredients": [
+    "Liqueur (Almond)"
+  ],
+  "imgLink": "https://vinepair.com/wp-content/uploads/2023/05/50-most-popular-cocktails-2023-internal-amaretto-sour.jpg",
   "__v": 0
 }]
